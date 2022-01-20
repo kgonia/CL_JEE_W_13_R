@@ -1,6 +1,8 @@
 package org.coderslab.errors.other;
 
-import org.sda.algorithms.house.House;
+
+
+import org.coderslab.repeat.model.House;
 
 import java.util.Arrays;
 import java.util.List;
