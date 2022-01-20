@@ -1,4 +1,4 @@
-package org.sda.algorithms.errors;
+package org.coderslab.errors;
 
 public class Error1 {
 

@@ -1,4 +1,4 @@
-package org.sda.algorithms.errors.other;
+package org.coderslab.errors.other;
 
 import java.io.*;
 
