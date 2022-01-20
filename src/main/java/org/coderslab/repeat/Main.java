@@ -98,9 +98,6 @@ public class Main {
         Person[] personsFromDb = new Person[numberOfUsers];
 
         try {
-            conn =
-                    DriverManager.getConnection("jdbc:mysql://localhost/public?" +
-                            "user=root&password=my-secret-pw");
 
             String query = "SELECT * FROM users";
             PreparedStatement pstmt = conn.prepareStatement(query);
@@ -109,9 +106,8 @@ public class Main {
             int i = 0;
             while (rs.next()) {
                 personsFromDb[i] = new Person(rs.getString(1), rs.getString(2), rs.getString(3));
-
+                i++;
             }
-            System.out.println("User in db: " + rs.getInt(1));
 
         } catch (SQLException ex) {
             // handle any errors
@@ -125,6 +121,7 @@ public class Main {
         try {
 
             // plik musi istnieć
+            // plik jest skopiowany do target/classess/org !!!
             URL resourceUrl = Main.class.getClassLoader().getResource("data_out.txt");
             File file = new File(resourceUrl.toURI());
 
